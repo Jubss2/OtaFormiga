@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float Speed;
-    private Rigidbody2D rig;
+    private Rigidbody rig;
     public float JumpForce;
     public bool isJumping;
     public bool doubleJump;
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
+        rig = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
@@ -52,23 +52,26 @@ public class Player : MonoBehaviour
 
     void Jump() {
         if(Input.GetButtonDown("Jump") && !isJumping){
-            rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+            rig.AddForce(new Vector2(0f, JumpForce), ForceMode.Impulse);
             //pulo duplo ou um só?
             anim.SetBool("jump", true);
+            isJumping = true;
+
         }
        
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
+    void OnCollisionEnter(Collision collision){
         if(collision.gameObject.layer == 6){
             isJumping = false;
             anim.SetBool("jump", false);
+           
     }
 
-    void OnCollisionExit2D(Collision2D collision){
+    void OnCollisionExit(Collision collision){
          if(collision.gameObject.layer == 6){
-
             isJumping = true;
+         
         }
     }
 
