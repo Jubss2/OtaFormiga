@@ -8,8 +8,12 @@ public class testRotMov : MonoBehaviour
     private bool isMoving = false;
     private Vector3 offset;
 
+    private bool CanMove;
+
     private void Update()
     {
+        if(!CanMove)
+        return;
         // Verificar o clique direito para rotacionar
         if (Input.GetMouseButtonDown(1))
         {
@@ -61,5 +65,10 @@ public class testRotMov : MonoBehaviour
             return hit.point;
         }
         return Vector3.zero;
+    }
+
+     public void SetCanMoving(bool Move){
+            CanMove = Move;
+        
     }
 }
