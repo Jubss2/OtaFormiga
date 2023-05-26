@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     private Animator anim;
 
+    public LayerMask isGround;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,18 +64,20 @@ public class Player : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision){
-        if(collision.gameObject.layer == 6){
+        if(collision.gameObject.layer == 6 ||collision.gameObject.layer == 7 ){
             isJumping = false;
             anim.SetBool("jump", false);
            
     }
 
     void OnCollisionExit(Collision collision){
-         if(collision.gameObject.layer == 6){
+         if(collision.gameObject.layer == 6||collision.gameObject.layer == 7 ){
             isJumping = true;
          
         }
     }
+
+    //OnTriggerEnter OnTriggerExit
 
 }
 }
