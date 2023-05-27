@@ -13,6 +13,7 @@ public class Trigger : MonoBehaviour
     void Start(){
     
         player = GameObject.Find("Player");
+        
     }
 
     void OnTriggerStay(Collider other)
