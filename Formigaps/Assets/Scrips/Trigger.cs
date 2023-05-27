@@ -20,6 +20,7 @@ public class Trigger : MonoBehaviour
     {
             if (other.CompareTag("Player")){
                  player.GetComponent<Player>().canMove3D = true;
+                 
             //faz a ação
         }
           
@@ -28,6 +29,7 @@ public class Trigger : MonoBehaviour
     {
             if (other.CompareTag("Player")){
                  player.GetComponent<Player>().canMove3D = false;
+                 UnityEngine.Debug.Log("Mover3D");
             //faz a ação
         }
            

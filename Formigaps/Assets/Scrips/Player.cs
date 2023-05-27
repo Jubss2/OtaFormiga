@@ -67,15 +67,16 @@ public class Player : MonoBehaviour
         if(collision.gameObject.layer == 6 ||collision.gameObject.layer == 7 ){
             isJumping = false;
             anim.SetBool("jump", false);
+            
            
     }
     }
-    void OnCollisionExit(Collision collision){
-         if(collision.gameObject.layer == 6||collision.gameObject.layer == 7 ){
-            isJumping = true;
+    //void OnCollisionExit(Collision collision){
+    //     if(collision.gameObject.layer == 6||collision.gameObject.layer == 7 ){
+    //        isJumping = true;
          
-        }
-    }
+   //     }
+  //  }
 
     //OnTriggerEnter OnTriggerExit
 
