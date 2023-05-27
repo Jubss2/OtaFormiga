@@ -7,12 +7,16 @@ public class testRotMov : MonoBehaviour
     private bool isRotating = false;
     private bool isMoving = false;
     private Vector3 offset;
+    private bool canMove;
+    private Player player;
 
-    private bool CanMove;
-
+    void Start(){
+        player = GameObject.Find("Player").GetComponent<Player>();
+        
+    }
     private void Update()
     {
-        if(!CanMove)
+        if(!player.canMove3D)
         return;
         // Verificar o clique direito para rotacionar
         if (Input.GetMouseButtonDown(1))
@@ -67,8 +71,5 @@ public class testRotMov : MonoBehaviour
         return Vector3.zero;
     }
 
-     public void SetCanMoving(bool Move){
-            CanMove = Move;
-        
-    }
+   
 }

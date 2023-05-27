@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Agua
   - Obstacle
+  - 3D
   layers:
   - Default
   - TransparentFX

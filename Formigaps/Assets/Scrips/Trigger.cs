@@ -1,23 +1,36 @@
+using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-
     private testRotMov[] objetos3D;
+    private GameObject[] objetos3DGO;
+    private GameObject player;
     // Start is called before the first frame update
-    void Start()
-    {
-        objetos3D = FindObjectsOfType<testRotMov>(); 
-        for(int i =0; i < objetos3D.Length; i++){
-            objetos3D[i].SetCanMoving(false);
-        }
+
+    void Start(){
+    
+        player = GameObject.Find("Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerStay(Collider other)
     {
-        
-    }
+            if (other.CompareTag("Player")){
+                 player.GetComponent<Player>().canMove3D = true;
+            //faz a ação
+        }
+          
+   }
+    void OnTriggerExit(Collider other)
+    {
+            if (other.CompareTag("Player")){
+                 player.GetComponent<Player>().canMove3D = false;
+            //faz a ação
+        }
+           
+          
+   }
 }
+

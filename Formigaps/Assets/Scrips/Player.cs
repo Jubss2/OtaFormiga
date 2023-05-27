@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public float JumpForce;
     public bool isJumping;
     public bool doubleJump;
-
+    public bool canMove3D = false;
     public GameObject gameOver;
 
     private Animator anim;
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
             anim.SetBool("jump", false);
            
     }
-
+    }
     void OnCollisionExit(Collision collision){
          if(collision.gameObject.layer == 6||collision.gameObject.layer == 7 ){
             isJumping = true;
@@ -80,5 +80,5 @@ public class Player : MonoBehaviour
     //OnTriggerEnter OnTriggerExit
 
 }
-}
+
 
