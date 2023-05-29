@@ -31,5 +31,13 @@ public class Pause : MonoBehaviour
         }
       }  
     }
+
+    public void ResumeGame()
+    {
+        pauseMenu.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    
   
 }
