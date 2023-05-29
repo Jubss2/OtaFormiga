@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class corte : MonoBehaviour
 {
     public Tilemap tilemap;
-    public BoxCollider blocoCollider;
+    public BoxCollider2D blocoCollider;
 
     private void Update()
     {

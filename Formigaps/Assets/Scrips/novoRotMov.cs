@@ -11,22 +11,11 @@ public class novoRotMov : MonoBehaviour
 
     private void Update()
     {
-        // Verificar o clique direito para rotacionar
-        if (Input.GetMouseButtonDown(1))
-        {
-            isRotating = true;
-        }
         if (Input.GetMouseButtonUp(1))
         {
             isRotating = false;
         }
 
-        // Verificar o clique esquerdo para mover
-        if (Input.GetMouseButtonDown(0))
-        {
-            isMoving = true;
-            offset = transform.position - GetMouseWorldPosition();
-        }
         if (Input.GetMouseButtonUp(0))
         {
             isMoving = false;
@@ -40,17 +29,17 @@ public class novoRotMov : MonoBehaviour
             float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 
             // Rotacionar nos eixos Y e Z
-            transform.Rotate(Vector3.up, -mouseX, Space.World);
-            transform.Rotate(Vector3.forward, mouseY, Space.World);
+            gameObject.transform.Rotate(Vector3.up, -mouseX, Space.World);
+            gameObject.transform.Rotate(Vector3.forward, mouseY, Space.World);
         }
 
         // Mover o objeto
         if (isMoving)
         {
             Vector3 targetPosition = GetMouseWorldPosition() + offset;
-            targetPosition.z = transform.position.z; // Manter o valor atual do eixo Z
+            targetPosition.z = gameObject.transform.position.z; // Manter o valor atual do eixo Z
 
-            transform.position = targetPosition;
+            gameObject.transform.position = targetPosition;
         }
     }
 
@@ -66,4 +55,25 @@ public class novoRotMov : MonoBehaviour
         return lastPosition;
         
     }
+
+
+    private void OnMouseOver()
+    {
+        // Verificar o clique direito para rotacionar
+        if (Input.GetMouseButtonDown(1))
+        {
+            isRotating = true;
+        }
+        
+
+        // Verificar o clique esquerdo para mover
+        if (Input.GetMouseButtonDown(0))
+        {
+            isMoving = true;
+            offset = gameObject.transform.position - GetMouseWorldPosition();
+        }
+        
+    }
+
+
 }
