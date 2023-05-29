@@ -9,6 +9,7 @@ public class CameraFollow : MonoBehaviour
     public float yOffset =1f;
     public Transform target;
     public Camera camera;
+    public Camera camerafase1;
 
     // Update is called once per frame
     void Update()
@@ -16,19 +17,11 @@ public class CameraFollow : MonoBehaviour
         Vector3 newPos = new Vector3(target.position.x,target.position.y + yOffset,-10f);
         transform.position = Vector3.Slerp(transform.position,newPos,FollowSpeed*Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.E)){
-            camera.orthographicSize = 10f;
-
-        }
-        if(Input.GetKeyDown(KeyCode.R)){
-            camera.orthographicSize = 5f;
-
-        }
     }
 
     void Start(){
         camera = GetComponent<Camera>();
-
+        camerafase1 = GetComponent<Camera>();
 
     }
 }
