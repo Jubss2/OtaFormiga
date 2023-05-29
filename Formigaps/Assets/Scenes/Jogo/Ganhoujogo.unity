@@ -456,7 +456,7 @@ RectTransform:
   m_GameObject: {fileID: 1018746326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1350899087}
@@ -464,7 +464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: -139}
+  m_AnchoredPosition: {x: 64, y: 50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018746328
@@ -487,7 +487,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You came back home!
+  m_text: The conclusion of this story is a little different, despite the beauty
+    and synchrony of the garden, there is nothing better than your own home
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cae6d3e815615c48ac8d9079b8a9b54, type: 2}
   m_sharedMaterial: {fileID: 7515197752991663827, guid: 9cae6d3e815615c48ac8d9079b8a9b54, type: 2}
@@ -905,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 311, y: 129}
+  m_AnchoredPosition: {x: 311, y: 110}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716987373
@@ -928,7 +929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations !
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cae6d3e815615c48ac8d9079b8a9b54, type: 2}
   m_sharedMaterial: {fileID: 7515197752991663827, guid: 9cae6d3e815615c48ac8d9079b8a9b54, type: 2}
@@ -1040,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.3499756, y: 5.084778}
+  m_AnchoredPosition: {x: -4.3499756, y: 1}
   m_SizeDelta: {x: -977.59, y: -470.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846756906
