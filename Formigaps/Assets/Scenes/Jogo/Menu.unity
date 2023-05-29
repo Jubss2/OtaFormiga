@@ -400,7 +400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hera\xB4s Fable"
+  m_text: Hera's Fable
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2135d0e7ea177e49983c76b4ecf2d40, type: 2}
   m_sharedMaterial: {fileID: 7417248610619564189, guid: c2135d0e7ea177e49983c76b4ecf2d40, type: 2}
