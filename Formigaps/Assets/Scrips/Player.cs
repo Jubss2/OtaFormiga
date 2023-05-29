@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     public bool doubleJump;
     public bool canMove3D = false;
     public GameObject gameOver;
-     public string cena2;
+    public string cena2;
+    public string cena3;
 
     private Animator anim;
 
@@ -84,6 +85,10 @@ public class Player : MonoBehaviour
         if(other.gameObject.layer == 9)
         {
            SceneManager.LoadScene(cena2);
+        }
+        if(other.gameObject.layer == 10)
+        {
+            SceneManager.LoadScene(cena3);
         }
         }    
     }
