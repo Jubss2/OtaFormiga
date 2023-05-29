@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public string cena;
+    public string cena1;
     [SerializeField]private GameObject painelMenuInicial;
-    [SerializeField]private GameObject painelOptions;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,24 +24,18 @@ public class Menu : MonoBehaviour
     public void QuitGame()
     {
         // Pelo editor da Unity
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         // Jogo Compilado
-       // Application.Quit();
+       Application.Quit();
     }
     public void StartGame()
     {
         SceneManager.LoadScene(cena);
 
     }
-    public void StartOptions()
+     public void StartMenu()
     {
-        painelMenuInicial.SetActive(false);
-        painelOptions.SetActive(true);
-    }
-    public void CloseOptions()
-    {
-        painelOptions.SetActive(false);
-        painelMenuInicial.SetActive(true);
-    }
+        SceneManager.LoadScene(cena1);
 
+    }
 }

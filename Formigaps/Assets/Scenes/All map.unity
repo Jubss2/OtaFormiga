@@ -64446,8 +64446,6 @@ MonoBehaviour:
   isGround:
     serializedVersion: 2
     m_Bits: 0
-  pausePanel: {fileID: 0}
-  cena: 
 --- !u!212 &2144136758
 SpriteRenderer:
   m_ObjectHideFlags: 0
