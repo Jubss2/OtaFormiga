@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public bool doubleJump;
     public bool canMove3D = false;
     public GameObject gameOver;
+     public string cena2;
 
     private Animator anim;
 
@@ -77,10 +78,17 @@ public class Player : MonoBehaviour
         if(collision.gameObject.layer == 6 ||collision.gameObject.layer == 7 ){
             isJumping = false;
             anim.SetBool("jump", false);
-            
-           
+        }    
     }
+    void OnTriggerEnter(Collider other){
+        if(other.gameObject.layer == 9)
+        {
+           SceneManager.LoadScene(cena2);
+        }
+        }    
     }
+
+  //  }
     //void OnCollisionExit(Collision collision){
     //     if(collision.gameObject.layer == 6||collision.gameObject.layer == 7 ){
     //        isJumping = true;
@@ -90,6 +98,6 @@ public class Player : MonoBehaviour
 
     //OnTriggerEnter OnTriggerExit
 
-}
+
 
 
