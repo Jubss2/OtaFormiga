@@ -7105,7 +7105,7 @@ GameObject:
   - component: {fileID: 748639031}
   - component: {fileID: 748639032}
   - component: {fileID: 748639033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: frente
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -39083,7 +39083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144136752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 225.91, y: 36.1, z: -0.65}
+  m_LocalPosition: {x: 237.7, y: 36.1, z: -0.65}
   m_LocalScale: {x: 2.7616048, y: 2.1123602, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
