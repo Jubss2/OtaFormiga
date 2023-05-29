@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - 3D
   - origem
+  - Tilemap
   layers:
   - Default
   - TransparentFX
