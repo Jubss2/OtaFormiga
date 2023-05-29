@@ -7,6 +7,7 @@ public class novoRotMov : MonoBehaviour
     private bool isRotating = false;
     private bool isMoving = false;
     private Vector3 offset;
+    private Vector3 lastPosition;
 
     private void Update()
     {
@@ -15,7 +16,7 @@ public class novoRotMov : MonoBehaviour
         {
             isRotating = true;
         }
-        else if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(1))
         {
             isRotating = false;
         }
@@ -26,7 +27,7 @@ public class novoRotMov : MonoBehaviour
             isMoving = true;
             offset = transform.position - GetMouseWorldPosition();
         }
-        else if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             isMoving = false;
         }
@@ -59,8 +60,10 @@ public class novoRotMov : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
+            lastPosition = hit.point;
             return hit.point;
         }
-        return Vector3.zero;
+        return lastPosition;
+        
     }
 }
